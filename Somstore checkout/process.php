@@ -114,9 +114,8 @@ if(isset($_SESSION["cart_session"]))
 			<!-- Begin Shell -->
 			<div class="shell">
 				<ul>
-					<li class="active"><a href="../index.php" title="index.php">Home</a></li>
-					<li><a href="customer.php">Đăng Ký</a> </li>
-					<li><a href="Sign In.php" title="Sign In"><span>Đăng Nhập</span></a></li>
+					<li class="active"><a href="../home.php" title="index.php">Home</a></li>
+
 				</ul>
 				<div class="cl">&nbsp;</div>
 			</div>
@@ -134,7 +133,7 @@ if(isset($_SESSION["cart_session"]))
             <div id="wwrapper">
                 <div id="steps">
 				
-                    <form id="formElem" name="formElem"  action="../index.php" method="POST" class="myForm">
+                    <form id="formElem" name="formElem"  action="../home.php" method="POST" class="myForm">
 					
 					
                         <fieldset class="step">
@@ -606,7 +605,7 @@ $(document).ready(function(){
         $.ajax({
         cache: false,
         type: 'POST',
-        url: '../index.php',
+        url: '../home.php',
         data: $(".myForm").serialize(),
         success: function(d) {
             $("#someElement").html(d);

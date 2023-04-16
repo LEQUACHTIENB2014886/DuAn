@@ -8,7 +8,7 @@ if (!mysqli_query($mysqli,$sql))
   {
   die('Error: ' . mysqli_error($mysqli));
   }
-  header("location: index.php");
+  header("location: ./Public/index.php");
   echo "1 record added";
 
  mysqli_close($mysqli);
