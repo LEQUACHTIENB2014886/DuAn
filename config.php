@@ -1,7 +1,7 @@
 <?php
-$currency = '$'; //Currency sumbol or code
+$currency = '$'; 
 
-//db settings
+//db
 $db_username = 'root';
 $db_password = '';
 $db_name = 'cnw';

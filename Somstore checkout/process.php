@@ -74,7 +74,6 @@ include("../config.php");
 </dt>
 <dd class="active" style="display: block;">
 <?php
-   //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 
 if(isset($_SESSION["cart_session"]))
@@ -139,7 +138,6 @@ if(isset($_SESSION["cart_session"]))
                         <fieldset class="step">
                             <legend>Tài Khoản
 							<?php
-   //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     
 if(isset($_SESSION["cart_session"]))
@@ -485,7 +483,6 @@ if(isset($_SESSION["cart_session"]))
                             <legend>Địa Chỉ
 							
 																				<?php
-   //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     
 if(isset($_SESSION["cart_session"]))
@@ -518,7 +515,6 @@ if(isset($_SESSION["cart_session"]))
                             
 
 <?php
-   //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     
 if(isset($_SESSION["cart_session"]))
@@ -544,7 +540,6 @@ if(isset($_SESSION["cart_session"]))
 						<fieldset class="step">
                             <legend>Xác Nhận
 																				<?php
-   //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     
 if(isset($_SESSION["cart_session"]))
