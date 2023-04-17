@@ -152,9 +152,6 @@ if(isset($_SESSION["cart_session"]))
 		   $results = $mysqli->query("SELECT productName,Description, Price FROM product  WHERE Product_ID='$Product_ID'"); 
           if ($results) { 
 		  
-	        
-			
-          //fetch results set as object and output HTML
           while($obj = $results->fetch_object())
         {
 			
