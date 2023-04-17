@@ -87,15 +87,15 @@ if(isset($_SESSION["cart_session"]))
         echo '<span class="remove-itm"><a href="cart_update.php?removep='.$cart_itm["code"].'&return_url='.$current_url.'">&times;</a></span>'."</br>";
         echo '<h3  style="color: green" ><big> '.$cart_itm["name"].' </big></h3>';
         echo '<div class="p-code"><b><i>ID:</i></b><strong style="color: #d7565b" ><big> '.$cart_itm["code"].' </big></strong></div>';
-		echo '<span><b><i>Shopping Cart</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
-        echo '<div class="p-price"><b><i>Price:</b></i> <strong style="color: #d7565b" ><big>'.$currency.$cart_itm["Qiimaha"].'</big></strong></div>';
+		echo '<span><b><i>Mã</i></b>( <strong style="color: #d7565b" ><big> '.$cart_itm["TiradaProductTiga"].'</big></strong>) </span>';
+        echo '<div class="p-price"><b><i>Giá:</b></i> <strong style="color: #d7565b" ><big>'.$cart_itm["Qiimaha"].'</big></strong></div>';
         echo '</li>';
         $subtotal = ($cart_itm["Qiimaha"]*$cart_itm["TiradaProductTiga"]);
         $total = ($total + $subtotal) ; 
     }
     echo '</ul>';
-    echo '<span class="check-out-txt"><strong style="color:green" ><i>Total:</i> <big style="color:green" >'.$currency.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Check Out</span></a></span>';
-	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Clear Cart</span></a>';
+    echo '<span class="check-out-txt"><strong style="color:green" ><i>Tổng thiệt hại:</i> <big style="color:green" >'.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Thanh Toán</span></a></span>';
+	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Làm Trống</span></a>';
 }else{
     echo ' <h4>(Your Shopping Cart Is Empty!!!)</h4>';
 }

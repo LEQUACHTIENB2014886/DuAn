@@ -63,8 +63,8 @@ if(isset($_SESSION["cart_session"]))
         $total = ($total + $subtotal); 
     }
     echo '</ul>';
-    echo '<span class="check-out-txt"><strong style="color:green" ><i>Tổng thiệt hại:</i> <big style="color:green" >'.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Check Out</span></a></span>';
-	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Clear Cart</span></a>';
+    echo '<span class="check-out-txt"><strong style="color:green" ><i>Tổng thiệt hại:</i> <big style="color:green" >'.$total.'</big></strong> <a   class="a-btnjanan"  href="view_cart.php"> <span class="a-btn-text">Thanh Toán</span></a></span>';
+	echo '&nbsp;&nbsp;<a   class="a-btnjanan"  href="cart_update.php?emptycart=1&return_url='.$current_url.'"><span class="a-btn-text">Làm Trống</span></a>';
 }else{
     echo ' <h4>(Your Shopping Cart Is Empty!!!)</h4>';
 }
