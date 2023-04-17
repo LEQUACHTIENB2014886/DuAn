@@ -23,50 +23,42 @@ include("../config.php");
 	<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
 	
 	
-	<!-- WAA DHAMAADKA JQueryga CHaTTIng Ka-->
+
 
 <script type="text/javascript">
 $(document).ready(function() {
 
 
 	
-	//method to trigger when user hits enter key
+
 	$("#shout_message").keypress(function(evt) {
 		if(evt.which == 13) {
 				var iusername = $('#shout_username').val();
 				var imessage = $('#shout_message').val();
 				post_data = {'username':iusername, 'message':imessage};
-			 	
-				//send data to "shout.php" using jQuery $.post()
+
 				$.post('shout.php', post_data, function(data) {
-					
-					//append data into messagebox with jQuery fade effect!
-					$(data).hide().appendTo('.message_box').fadeIn();
 	
-					//keep scrolled to bottom of chat!
+					$(data).hide().appendTo('.message_box').fadeIn();
+
 					var scrolltoh = $('.message_box')[0].scrollHeight;
 					$('.message_box').scrollTop(scrolltoh);
-					
-					//reset value of message box
+
 					$('#shout_message').val('');
 					
 				}).fail(function(err) { 
-				
-				//alert HTTP server error
+
 				alert(err.statusText); 
 				});
 			}
 	});
-	
-	//toggle hide/show shout box
+
 	$(".close_btn").click(function (e) {
-		//get CSS display state of .toggle_chat element
 		var toggleState = $('.toggle_chat').css('display');
 		
 		//toggle show/hide chat box
 		$('.toggle_chat').slideToggle();
-		
-		//use toggleState var to change close/open icon image
+
 		if(toggleState == 'block')
 		{
 			$(".header div").attr('class', 'open_btn');
@@ -80,7 +72,7 @@ $(document).ready(function() {
 
 </script>
 
-<!-- WAA DHAMAADKA JQueryga CHaTTIng Ka-->
+
 	
 </head>
 <body>
@@ -100,7 +92,7 @@ $(document).ready(function() {
 </dt>
 <dd class="active" style="display: block;">
 <?php
-   //current URL of the Page. cart_update.php redirects back to this URL
+
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 
 if(isset($_SESSION["cart_session"]))
@@ -182,13 +174,11 @@ if(isset($_SESSION["cart_session"]))
 	      <div class="section group">
 		  
 		  <?php
-    //current URL of the Page. cart_update.php redirects back to this URL
 	$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
     
 	$results = $mysqli->query("SELECT * FROM product ORDER BY Product_ID ASC");
     if ($results) { 
-	
-        //fetch results set as object and output HTML
+
         while($obj = $results->fetch_object())
         {
 			echo '<div class="grid_1_of_4 images_1_of_4">'; 
